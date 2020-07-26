@@ -1,0 +1,53 @@
+<form [formGroup]="employee"> 
+    <div class="form-group row text-center">
+        <div class="col-md-1">
+            <label>Id</label>
+        </div>
+        <div class="col-md-2">
+            <input type="number" formControlName="EmployeeId" class="form-control"/>
+        </div>
+        <div class="col-md-1">
+            <input value="Buscar" (click)="buscaremployee() "class="btn btn-success" />
+        </div>
+    </div>
+</form>
+
+<br>
+<div class="text-center">
+    <div class="spinner-border text-primary" role="status" *ngIf="loading">
+        <span class="sr-only">Loading...</span>
+    </div>
+</div>
+<br>
+<br>
+
+<div class="text-center">
+        <table class="table table-sm table-hover responsive">
+            <thead>
+                <th>Id</th>
+                <th>Name</th>
+                <th>contract Type</th>
+                <th>Role</th>
+                <th>Hourly salary</th>
+                <th>Monthly salary</th>
+                <th>Annual salary</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of listEmployee">
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.contractTypeName}}</td>
+                    <td>{{employee.roleName}}</td>
+                    <td>{{employee.hourlySalary}}</td>
+                    <td>{{employee.monthlySalary}}</td>
+                    <td>{{employee.annualSalary}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+</div>
+
+
+
+
+

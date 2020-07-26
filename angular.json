@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FEEmpleados"
+    }
+  },
+  "defaultProject": "FEEmpleados",
+  "cli": {
+    "analytics": false
+  }
 }
